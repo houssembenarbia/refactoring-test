@@ -12,7 +12,7 @@ namespace LegacyApp
                 var clientRepository = new ClientRepository();
                 User user =new User(firname,surname,email,dateOfBirth,clientRepository.GetById(clientId));
 
-                using(user) using (clientRepository)
+                using(user) using(clientRepository)
                 {
                     if(checkValidity(user) && checkCredit(user))
                     {

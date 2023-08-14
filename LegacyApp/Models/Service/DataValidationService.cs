@@ -2,7 +2,7 @@ using System;
 
 namespace LegacyApp
 {
-    class DataValidationService
+    public class DataValidationService
     {
         private bool ValidateEmail(string email)
         {
@@ -27,6 +27,7 @@ namespace LegacyApp
             {
                 return false;
             }
+            return false;
         }
             
 
@@ -37,12 +38,12 @@ namespace LegacyApp
 
         public bool checkCredit(User _User)
         {
-            if (_User.client.Name == "VeryImportantClient")
+            if (_User.Client.Name == "VeryImportantClient")
             {
                 // Skip credit chek
                 _User.HasCreditLimit = false;
             }
-            else if (_User.client.Name == "ImportantClient")
+            else if (_User.Client.Name == "ImportantClient")
             {
                 // Do credit check and double credit limit
                 _User.HasCreditLimit = true;
@@ -68,7 +69,9 @@ namespace LegacyApp
             {
                 return false;
             }
+            return true;
         }
+        
     }
 }
 
