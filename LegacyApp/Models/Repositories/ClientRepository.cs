@@ -1,11 +1,16 @@
 ﻿using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System;
 
 namespace LegacyApp
 {
-    public class ClientRepository
+    public class ClientRepository:IDisposable
     {
+        public void Dispose()
+        {
+        } 
+
         public Client GetById(int id)
         {
             Client client = null;
@@ -38,5 +43,8 @@ namespace LegacyApp
 
             return client;
         }
+
+        
     }
+    
 }

@@ -2,7 +2,7 @@
 
 namespace LegacyApp
 {
-    public class User
+    public class User:IDisposable
     {
         public Client Client { get; set; }
         public DateTime DateOfBirth { get; set; }
@@ -11,5 +11,10 @@ namespace LegacyApp
         public string Surname { get; set; }
         public bool HasCreditLimit { get; set; }
         public int CreditLimit { get; set; }
+
+        public void Dispose()
+        {
+
+        }
     }
 }
