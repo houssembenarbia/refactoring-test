@@ -10,7 +10,14 @@ namespace LegacyApp
             try
             {
                 var clientRepository = new ClientRepository();
-                User user =new User(firname,surname,email,dateOfBirth,clientRepository.GetById(clientId));
+                 var user = new User
+                    {
+                        Client = clientRepository.GetById(clientId),
+                        DateOfBirth = dateOfBirth,
+                        EmailAddress = email,
+                        Firstname = firname,
+                        Surname = surname
+                    };
 
                 using(user) using(clientRepository)
                 {

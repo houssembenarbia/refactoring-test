@@ -12,15 +12,6 @@ namespace LegacyApp
         public bool HasCreditLimit { get; set; }
         public int CreditLimit { get; set; }
 
-        // Injection par constructeur
-        public User(string firname, string surname, string email, DateTime dateOfBirth,Client _Client)
-        {
-            this.Firstname =firname;
-            this.Surname =surname;
-            this.EmailAddress =email;
-            this.DateOfBirth =dateOfBirth;
-            this.Client=_Client;
-        }
         public void Dispose()
         {
 
