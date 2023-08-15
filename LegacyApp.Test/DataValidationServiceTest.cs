@@ -1,3 +1,5 @@
+using System;
+using LegacyApp;
 namespace LegacyApp.Test;
 
 public class DataValidationServiceTest
@@ -9,12 +11,12 @@ public class DataValidationServiceTest
     public void ValidateAge()
     {
         //Arrange 
-        var TDataValidationService=new DataValidationServiceTest();
+        var TDataValidationService=new DataValidationService();
 
         //Act
-        bool isValid=TDataValidationService.ValidateAge(DateTime.ParseExact("2005-05-08"));
+        bool isValid=TDataValidationService.ValidateAge(new DateTime(1993, 1, 1));
         //Assert
-         Assert.Equal(false,isValid);
+        Assert.False(isValid);
     }
 /*
     [Fact]
@@ -23,7 +25,7 @@ public class DataValidationServiceTest
         //Arrange 
         var _Client=new Client();
         var _User=new User();
-        var TDataValidationService=new DataValidationServiceTest();
+        var TDataValidationService=new DataValidationService();
         //Act
         bool isValid=TDataValidationService.checkCredit();
         //Assert
@@ -35,7 +37,7 @@ public class DataValidationServiceTest
         //Arrange 
         var _User=new User();
         var _User=new User();
-        var TDataValidationService=new DataValidationServiceTest();
+        var TDataValidationService=new DataValidationService();
         //Act
         bool isValid=TDataValidationService.checkCredit();
         //Assert

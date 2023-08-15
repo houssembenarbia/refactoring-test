@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\refactoring-test-main\LegacyApp\LegacyApp.csproj" />
+    <ProjectReference Include="..\LegacyApp\LegacyApp.csproj" />
   </ItemGroup>
 
 </Project>

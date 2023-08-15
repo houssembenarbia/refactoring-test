@@ -2,6 +2,7 @@ using System;
 
 namespace LegacyApp
 {
+
     public class DataValidationService
     {
         private bool ValidateEmail(string email)
@@ -13,7 +14,7 @@ namespace LegacyApp
             return string.IsNullOrEmpty(Firstname) || string.IsNullOrEmpty(Surname);
         }
 
-        private bool ValidateAge(DateTime dateOfBirth)
+        public bool ValidateAge(DateTime dateOfBirth)
         {
             var now = DateTime.Now;
             int age = now.Year - dateOfBirth.Year;
@@ -74,4 +75,3 @@ namespace LegacyApp
         
     }
 }
-
